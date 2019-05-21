@@ -1,0 +1,40 @@
+
+    <div >
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <a class= "navbar-brand">Project Management</a>
+        </nav>
+        
+        <div style="margin-top:40px">
+        <nav class="navbar" >
+        <ul class="nav navbar-nav text-bold">
+            <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/project']" routerLinkActive="class-name" 
+                routerLinkActiveOptions = "{exact : true}"
+                 style = "color:black" >Add Project</a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/addTask']"  routerLinkActive="class-name" 
+                routerLinkActiveOptions = "{exact : true}" style = "color:black">Add Task</a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/user']"  routerLinkActive="class-name" 
+                routerLinkActiveOptions = "{exact : true}" style = "color:black">Add User</a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                <a [routerLink]="['/viewTask']"  routerLinkActive="class-name" 
+                routerLinkActiveOptions = "{exact : true}" style = "color:black">View Task</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    </div>
+
+
+<div class="container" style="margin-top:20px">
+    <router-outlet></router-outlet>
+</div>
+<div id="loading-div" text-center class="modal-backdrop">
+    <div text-center class="modal-backdrop-loading loader">
+        <img src="assets/images/loading.gif" alt="">
+    </div>
+</div>
