@@ -1,0 +1,86 @@
+SuccessConsole Output
+Started by user Sagarendra Paul
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\build_items
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git # timeout=10
+Fetching upstream changes from https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 0954dfea080ea690b34eaa9b29c9a840f90a122b (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 0954dfea080ea690b34eaa9b29c9a840f90a122b
+Commit message: "uploading source code into git"
+ > git.exe rev-list --no-walk 0954dfea080ea690b34eaa9b29c9a840f90a122b # timeout=10
+Path To MSBuild.exe: C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
+Executing the command cmd.exe /C " C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe /p:VisualStudioVersion=10.0 "C:\Program Files (x86)\Jenkins\workspace\build_items/SourceCode/server/ProjectManager/ProjectManager.sln" " && exit %%ERRORLEVEL%% from C:\Program Files (x86)\Jenkins\workspace\build_items
+[build_items] $ cmd.exe /C " C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe /p:VisualStudioVersion=10.0 "C:\Program Files (x86)\Jenkins\workspace\build_items/SourceCode/server/ProjectManager/ProjectManager.sln" " && exit %%ERRORLEVEL%%
+Microsoft (R) Build Engine version 4.6.1055.0
+[Microsoft .NET Framework, version 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+Build started 5/22/2019 5:14:46 AM.
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager\ProjectManager.csproj" (2) on node 1 (default targets).
+Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+EntityDeployNonEmbeddedResources:
+Skipping target "EntityDeployNonEmbeddedResources" because it has no outputs.
+EntityDeployEmbeddedResources:
+Skipping target "EntityDeployEmbeddedResources" because all output files are up-to-date with respect to the input files.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  ProjectManager -> C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager\bin\ProjectManager.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager\ProjectManager.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\ProjectManager.Tests.csproj" (3) on node 1 (default targets).
+Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\ProjectManager.Tests.csproj" (3) is building "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager\ProjectManager.csproj" (2:3) on node 1 (GetNativeManifest target(s)).
+Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager\ProjectManager.csproj" (GetNativeManifest target(s)).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\coverage.bat" to "bin\Debug\coverage.bat".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  ProjectManager.Tests -> C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\bin\Debug\ProjectManager.Tests.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\ProjectManager.Tests.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManger.NBenchPerformanceTesting\ProjectManger.NBenchPerformanceTesting.csproj" (4) on node 1 (default targets).
+Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManger.NBenchPerformanceTesting\ProjectManger.NBenchPerformanceTesting.csproj" (4) is building "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\ProjectManager.Tests.csproj" (3:3) on node 1 (GetNativeManifest target(s)).
+Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\ProjectManager.Tests.csproj" (GetNativeManifest target(s)).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.Tests\coverage.bat" to "bin\Debug\coverage.bat".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  ProjectManger.NBenchPerformanceTesting -> C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManger.NBenchPerformanceTesting\bin\Debug\ProjectManger.NBenchPerformanceTesting.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManger.NBenchPerformanceTesting\ProjectManger.NBenchPerformanceTesting.csproj" (default targets).
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\build_items\SourceCode\server\ProjectManager\ProjectManager.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.40
+Finished: SUCCESS

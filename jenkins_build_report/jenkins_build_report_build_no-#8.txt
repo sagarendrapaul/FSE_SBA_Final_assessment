@@ -1,0 +1,29 @@
+Started by user Sagarendra Paul
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\build_items
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git # timeout=10
+Fetching upstream changes from https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress https://github.com/sagarendrapaul/FSE_SBA_Final_assessment.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 0954dfea080ea690b34eaa9b29c9a840f90a122b (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 0954dfea080ea690b34eaa9b29c9a840f90a122b
+Commit message: "uploading source code into git"
+ > git.exe rev-list --no-walk 0954dfea080ea690b34eaa9b29c9a840f90a122b # timeout=10
+Path To MSBuild.exe: C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
+Executing the command cmd.exe /C " C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe /p:VisualStudioVersion = 10.0 "C:\Program Files (x86)\Jenkins\workspace\build_items/SourceCode/server/ProjectManager/ProjectManager.sln" " && exit %%ERRORLEVEL%% from C:\Program Files (x86)\Jenkins\workspace\build_items
+[build_items] $ cmd.exe /C " C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe /p:VisualStudioVersion = 10.0 "C:\Program Files (x86)\Jenkins\workspace\build_items/SourceCode/server/ProjectManager/ProjectManager.sln" " && exit %%ERRORLEVEL%%
+Microsoft (R) Build Engine version 4.6.1055.0
+[Microsoft .NET Framework, version 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+MSBUILD : error MSB1008: Only one project can be specified.
+Switch: 10.0
+
+For switch syntax, type "MSBuild /help"
+Build step 'Build a Visual Studio project or solution using MSBuild' marked build as failure
+Finished: FAILURE
